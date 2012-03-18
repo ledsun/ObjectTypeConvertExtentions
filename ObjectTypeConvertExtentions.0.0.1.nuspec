@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>0.0.1</version>
+    <authors>shigeru.nakajima</authors>
+    <owners />
+    <licenseUrl>http://www.opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/ledsun/ObjectTypeConvertExtentions</projectUrl>
+    <id>ObjectTypeConvertExtentions</id>
+    <title>ObjectTypeConvertExtentions</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>取得したい型名のメソッドで型を変換します。
+object str = "1";
+int ret = str.Int(); //1 as int</description>
+    <summary>ExtentionMethod of Object for convert type.
+オブジェクト型から各型への変換用拡張メソッドです。</summary>
+  </metadata>
+  <files>
+    <file src="..\ObjectTypeConvertExtentions\ObjectTypeConvertExtentions\bin\Release\ObjectTypeConvertExtentions.dll" target="lib\ObjectTypeConvertExtentions.dll" />
+  </files>
+</package>
