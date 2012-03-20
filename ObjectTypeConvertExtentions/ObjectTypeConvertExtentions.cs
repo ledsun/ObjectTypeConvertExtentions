@@ -2,7 +2,7 @@
 using System.Data.SqlTypes;
 using System.Globalization;
 
-namespace Ledsun.Alhambra.Db.Data
+namespace Ledsun.ObjectTypeConvertExtentions
 {
     /// <summary>
     /// オブジェクト型から各種型への変換用拡張メソッドクラス

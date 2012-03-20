@@ -8,10 +8,11 @@
     <ProjectGuid>{E8066772-BA71-45AA-B14C-0049A156C516}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ObjectTypeConvertExtentions</RootNamespace>
+    <RootNamespace>Ledsun.ObjectTypeConvertExtentions</RootNamespace>
     <AssemblyName>ObjectTypeConvertExtentions</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
