@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <authors>ledsun</authors>
     <owners />
     <licenseUrl>http://www.opensource.org/licenses/MIT</licenseUrl>
@@ -16,6 +16,6 @@ int ret = str.Int(); //1 as int</description>
 オブジェクト型から各型への変換用拡張メソッドです。</summary>
   </metadata>
   <files>
-    <file src="ObjectTypeConvertExtentions\bin\Release\ObjectTypeConvertExtentions.dll" target="ObjectTypeConvertExtentions.dll" />
+    <file src="ObjectTypeConvertExtentions\bin\Release\ObjectTypeConvertExtentions.dll" target="lib\ObjectTypeConvertExtentions.dll" />
   </files>
 </package>
