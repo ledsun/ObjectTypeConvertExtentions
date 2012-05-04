@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data.SqlTypes;
-using Ledsun.ObjectTypeConvertExtentions;
+using ObjectExtentions.TypeConvert;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AlhambraTest

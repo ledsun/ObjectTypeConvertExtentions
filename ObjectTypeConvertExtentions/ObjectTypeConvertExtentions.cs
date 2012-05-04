@@ -2,7 +2,7 @@
 using System.Data.SqlTypes;
 using System.Globalization;
 
-namespace Ledsun.ObjectTypeConvertExtentions
+namespace ObjectExtentions.TypeConvert
 {
     /// <summary>
     /// オブジェクト型から各種型への変換用拡張メソッドクラス
@@ -259,4 +259,5 @@ namespace Ledsun.ObjectTypeConvertExtentions
             return (null == val || val is DBNull);
         }
     }
+
 }
