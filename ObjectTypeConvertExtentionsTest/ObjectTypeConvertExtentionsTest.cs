@@ -218,12 +218,14 @@ namespace AlhambraTest
             Assert.AreEqual<bool>(false, ObjectTypeConvertExtentions.Bool(null));
             Assert.AreEqual<bool>(true, ObjectTypeConvertExtentions.Bool(-1));
             Assert.AreEqual<bool>(false ,ObjectTypeConvertExtentions.Bool(0));
-            Assert.AreEqual<bool>(true, ObjectTypeConvertExtentions.Bool(1));
-            Assert.AreEqual<bool>(true, ObjectTypeConvertExtentions.Bool(100));
             Assert.AreEqual<bool>(true, ObjectTypeConvertExtentions.Bool("TRue"));
             Assert.AreEqual<bool>(false, ObjectTypeConvertExtentions.Bool("falSe"));
             Assert.AreEqual<bool>(true, ObjectTypeConvertExtentions.Bool(true));
             Assert.AreEqual<bool>(false, ObjectTypeConvertExtentions.Bool(false));
+            Assert.AreEqual<bool>(true, ObjectTypeConvertExtentions.Bool("-1"));
+            Assert.AreEqual<bool>(false, ObjectTypeConvertExtentions.Bool("0"));
+            Assert.AreEqual<bool>(true, ObjectTypeConvertExtentions.Bool("1"));
+            Assert.AreEqual<bool>(true, ObjectTypeConvertExtentions.Bool("100"));
         }
 
         [TestMethod, ExpectedException(typeof(FormatException))]

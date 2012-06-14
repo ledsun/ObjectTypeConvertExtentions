@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlTypes;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace ObjectExtentions.TypeConvert
 {
@@ -224,19 +225,19 @@ namespace ObjectExtentions.TypeConvert
 
         /// <summary>
         /// 0はFalseそれ以外の数字はTrue
-        /// 文字列の場合はTrue、Falseは変換可能（大文字小文字を区別しない）。それ以外は例外を出す
+        /// 文字列の場合はTrue、False、数字は変換可能（大文字小文字を区別しない）。それ以外は例外を出す
         /// </summary>
         /// <param name="val"></param>
         /// <returns></returns>
         public static bool Bool(this object val)
         {
-            return val.IsNull() ? false : Convert.ToBoolean(val);
+            return val.IsNull() ? false : ToBoolean(val);
         }
 
         /// <summary>
         /// nullはnull
         /// 0はFalseそれ以外の数字はTrue
-        /// 文字列の場合はTrue、Falseは変換可能（大文字小文字を区別しない）。それ以外は例外を出す
+        /// 文字列の場合はTrue、False、数字は変換可能（大文字小文字を区別しない）。それ以外は例外を出す
         /// </summary>
         /// <param name="val"></param>
         /// <returns></returns>
@@ -245,6 +246,20 @@ namespace ObjectExtentions.TypeConvert
             if (val.IsNull())
             {
                 return null;
+            }
+            return ToBoolean(val);
+        }
+
+        /// <summary>
+        /// 数字だけの文字列は数値に変えて変換します。
+        /// </summary>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        private static bool ToBoolean(object val)
+        {
+            if (val is string && Regex.IsMatch((string)val, "^-?[0-9]+$"))
+            {
+                val = val.Int();
             }
             return Convert.ToBoolean(val);
         }
