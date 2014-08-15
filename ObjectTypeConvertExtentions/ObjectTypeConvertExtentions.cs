@@ -273,6 +273,30 @@ namespace ObjectExtentions.TypeConvert
         {
             return (null == val || val is DBNull);
         }
+        
+         /// <summary>
+        /// Kishor Naik
+        /// kishor.naik011.net@gmail.com
+        /// Convert Object to any Specified Type 
+        /// </summary>
+        /// <typeparam name="T">Specified Type</typeparam>
+        /// <param name="Obj">Specified Object</param>
+        /// <returns>Specified Return Type</returns>
+        public static T ConvertTo<T>(this Object Obj)
+        {
+            T TObj = default(T);
+            try
+            {
+                TObj = (T) Convert.ChangeType(Obj, typeof (T));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return TObj;
+        }
+       
     }
 
 }
