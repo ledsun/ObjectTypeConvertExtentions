@@ -233,5 +233,58 @@ namespace AlhambraTest
         {
             ObjectTypeConvertExtentions.Bool("x");
         }
+        
+         [TestMethod]
+        public void ConvertToString()
+        {
+            Object ObjStr = "Help";
+            Assert.AreEqual<String>("Help", ObjStr.ConvertTo<String>());
+        }
+
+        [TestMethod]
+        public void ConvertToInt()
+        {
+            Object ObjInt = 11;
+            Assert.AreEqual<int>(11, ObjInt.ConvertTo<int>());
+        }
+
+        [TestMethod]
+        public void ConvertToLong()
+        {
+            Object ObjLong = 123456789;
+            Assert.AreEqual<long>(123456789, ObjLong.ConvertTo<long>());
+        }
+
+        [TestMethod]
+        public void ConvertToDouble()
+        {
+            Object ObjDouble = 11.50;
+            Assert.AreEqual<double>(11.50, ObjDouble.ConvertTo<double>());
+        }
+
+        [TestMethod]
+        public void ConvertToDateTime()
+        {
+            Object ObjDateTime = DateTime.Now;
+
+            Assert.AreEqual<DateTime>(DateTime.Now, ObjDateTime.ConvertTo<DateTime>());
+        }
+
+        /// <summary>
+        /// Convert Object to Object of Another Class
+        /// </summary>
+        [TestMethod]
+        public void ConvertToObject()
+        {
+            Object ObjDeveloper = new Developer() {FirstName="Kishor",LastName="Naik"};
+
+            Assert.AreEqual(ObjDeveloper, ObjDeveloper.ConvertTo<Developer>());
+        }
+    }
+    
+     public class Developer
+    {
+        public String FirstName { get; set; }
+        public String LastName { get; set; }
     }
 }
